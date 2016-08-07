@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-windows ua-ff47">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+  搜索: Python
+</title>
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+<link rel="search" type="application/opensearchdescription+xml" title="豆瓣搜索" href="/opensearch">
+
+    <script >var _head_start = new Date();</script>
+    <script src="https://img3.doubanio.com/f/shire/72ced6df41d4d158420cebdd254f9562942464e3/js/jquery.min.js"></script>
+    <script src="https://img3.doubanio.com/f/shire/71ac0453da20ef0d46981120323c692ebfc729b5/js/douban.js"></script>
+    <link href="https://img3.doubanio.com/f/shire/69fd52df10c14b18d614f998f9bbb2ae88f38e36/css/douban.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+
+  h1{display:none}.mod-search{position:relative;overflow:hidden;zoom:1;margin-bottom:28px;background-color:#f7f7f8;padding:7px}.mod-search input{-webkit-appearance:none;border:0;background:transparent}.mod-search label{position:absolute;left:12px;top:10px;line-height:30px;cursor:text;color:#bbb}.mod-search legend{display:none}.mod-search fieldset{border:0;padding:0;margin:0}.mod-search .inp{height:30px;cursor:text;border:1px solid #dcdcdc;background-color:#fff}.mod-search .inp input{background:#fff;width:94%;margin:0;text-align:left;height:30px;padding-left:6px;height:28px\9;line-height:28px\9;outline:0}.mod-search .inp-btn{position:absolute;top:6px;right:6px;width:30px;height:30px;zoom:1;overflow:hidden}.mod-search .inp-btn input{width:100%;height:100%;font-size:0;padding:35px 0 0 0;overflow:hidden;background:url(https://img3.doubanio.com/f/sns/f71f15922ebd7c0ff0ea0e7a25577529efd8981a/pics/icon/bn_srh_1.png) no-repeat 45% 45%;color:transparent;cursor:pointer}.search-cate{float:left;margin-right:35px;width:65px;font-size:0}.search-cate li{width:65px;display:inline-block;*display:inline;zoom:1;margin-bottom:12px;line-height:1.2;font-size:12px}.search-cate li a{display:block;padding:3px 0;text-align:center}.search-cate li a:link,.search-cate li a:visited{color:#111}.search-cate li a:hover{color:#fff;background-color:#8cd379;border-radius:3px}.search-cate .on a:link,.search-cate .on a:visited,.search-cate .on a:hover,.search-cate .on a:active{background:#7fc06e;color:#fff;border-radius:3px}.search-cate .new a{background:url(https://img3.doubanio.com/f/sns/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif) no-repeat right 0}.search-result{overflow:hidden;zoom:1}.search-result .no-result{font-size:12px}.no-result{margin-bottom:40px;font-size:14px;color:#999}.frm-find{margin-bottom:30px}.frm-find .item{position:relative;margin-bottom:10px;color:#666}.frm-find .item label{position:absolute;top:2px;left:2px;line-height:20px;color:#999;cursor:text}.frm-find .item input{padding:5px;border:1px solid #ccc}.frm-find .item-accounts{border:1px solid #ccc}.frm-find .item-accounts input{width:60%;border:0}.frm-find .item-accounts .mail-domain{position:absolute;top:0;right:2px}.frm-find .item-accounts .mail-domain select{padding:2px;border:0;font-size:13px;background:transparent;-webkit-appearance:none}.frm-find .item-password input{width:98%}.result .ic-movie-mark{background-color:#71b5de}.result .ic-read-mark{background-color:#825d5b}
+  .search_report { float:right; margin-top:15px; margin-right:10px;}
+  .search_report a:link,
+  .search_report a:hover,
+  .search_report a:visited,
+  .search_report a:active { color:#bbb; }
+  .search_report a:hover { color:#fff; background-color:#bbb; }
+  .search-list-item a{color:#666}
+  .search-list-item a:hover{color:#fff}
+  .topic-promotion {font-size: 13px; border-bottom: 1px dashed #CCC; padding-bottom: 15px; margin-bottom: 10px}
+  .topic-promotion a:hover {color: #37A; background-color: #E8E8E8}
+  .topic-promotion a {display: inline-block; padding: 3px 23px; margin-right: 10px; background: #F5F5F5}
+  .topic-promotion a.new-icon {background: #F5F5F5 url('https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif') no-repeat right 0}
+  .topic-promotion span {font-size: 12px; color: gray}
+  .topic-promotion .related-topics {margin-top: 20px}
+
+    </style>
+
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/71cd424892ea3a0d.css">
+    <script>
+  var o={},PEOPLE_ID="",currTagId="",totallen=16,newGroupNum=0,groupNameArr=[],isDuplicate=false,mlist=$(".menu-list"),olist=$(".group-opts-list"),sglist=$(".set-group-list"),sgarrow=$(".user-group-arrow"),addGroup=$("#add-new-group"),TEMPL_NEW_TAG='<li><a href="?tag={ID}">{NAME}</a></li>',TEMPL_MENU_LIST='<li><a href="?tag=0">全部</a></li>{CUSTOM_TAGS}<li class="last"><a href="?tag=2">未分组</a></li>',TEMPL_NEW_GROUP_ITEM='<li><input type="checkbox" id="{GID}" value="{GID}" {CHECKED}><label for="{GID}">{GNAME}</label></li>',TEMPL_SET_LIST_ITEMS='{CUSTOM_ITEMS}<li class="last"><span class="create-new">新分组</span></li>',TEMPL_GROUP_OPTS='<ul class="group-opts-list"><li id="del-group">删除分组</li><li id="rename-group">改组名</li></ul>',TEMPL_FRIEND_TIPS='<span class="tips">(可看仅朋友可见内容)</span>',TEMPL_EDIT_ICON='&nbsp;<em class="icon-edit"></em>',TEMPL_TIPS='<span class="tips tlimit">{TIPS}</span>',CSS_LAST_ITEM=".set-group-list .last",CSS_INPUT_CREATE=".input-create",CSS_ARROW_SELECT="arrow-select",CSS_LOADER=".gray-loader",CSS_SET_GROUP_LIST=".set-group-list",CSS_EM_TIPS=".tlimit",TXT_DUP_NAME="已有同名分组",TXT_NULL_NAME="请输入分组名",TXT_BAN_WORDS="分组名称含有被禁止的内容",isIE6=($.browser.msie&&$.browser.version==="6.0")?true:false,collectGroupName=function(){var a=$("#db-timeline-hd a").toArray();$.each(a,function(c,b){groupNameArr[c]=$.trim($(b).text())})},countNum=function(){var a=$("input[type=checkbox]:checked").length;if(a>0){$(".sel-wrapper .user-rs").html("加入"+a+"个分组")}else{$(".sel-wrapper .user-rs").html("加入分组")}},changeGroupShow=function(f){var c=f.parents(".user-group-arrow").prev(".user-rs"),b=f.closest(CSS_SET_GROUP_LIST).children().children(":checked"),a=b.length,e=b.toArray(),d=$.map(e,function(g){return $(g).next().text().escapeHTML()});if(a>0){c.html(d.join(", ").substring(0,totallen)).show();if(d.join(", ").length>=totallen){c.append("...")}}else{c.text("未分组")}},createNewGroup=function(d,b,c,a){$.each(groupNameArr,function(f,e){if(c===e||c==="全部"||c==="未分组"){isDuplicate=true;if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_DUP_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_DUP_NAME)}return false}else{isDuplicate=false}});if(c&&!isDuplicate){$(CSS_EM_TIPS).remove();$.post_withck("/j/contact/newtag",{name:c,people:b},function(k){if(k.result){var h=[],i=[],m="",g="",l="",j=k.data.newtag.id,f=k.data.newtag.name;if(mlist.length){$.each(k.data.all,function(p,n){h[p]=TEMPL_NEW_TAG.replace("{ID}",n.id).replace("{NAME}",n.name.escapeHTML())});mlist.html(TEMPL_MENU_LIST.replace("{CUSTOM_TAGS}",h.join("")));m=$(".menu-list a:contains("+currGroupName+")");m.parent().addClass("on");if(currGroupName!=="全部"&&currGroupName!=="朋友"&&currGroupName!=="未分组"){m.append(TEMPL_EDIT_ICON).after(TEMPL_GROUP_OPTS)}}$.each(k.data.all,function(p,n){i[p]=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,n.id).replace("{GNAME}",n.name.escapeHTML()).replace("{CHECKED}",n.status?'checked="checked"':"")});$(CSS_SET_GROUP_LIST,d).html(TEMPL_SET_LIST_ITEMS.replace("{CUSTOM_ITEMS}",i.join("")));$(CSS_SET_GROUP_LIST+" li:first",d).append(TEMPL_FRIEND_TIPS);if($(CSS_SET_GROUP_LIST).length>1){l=$("#"+j).parent().next().children("label").text()||"";g=TEMPL_NEW_GROUP_ITEM.replace(/{GID}/g,j).replace(/{GNAME}/g,f.escapeHTML()).replace("{CHECKED}","");if(l){$(CSS_SET_GROUP_LIST+' li:contains("'+l+'")').before(g)}else{$(CSS_LAST_ITEM).before(g)}$(CSS_SET_GROUP_LIST+" input[id="+j+"]",d).eq(1).parent().remove()}newGroupNum=$(CSS_SET_GROUP_LIST+" input[type=checkbox]",d).length;if(newGroupNum>=a){$(CSS_LAST_ITEM).remove()}var e=$(d).children().children("li:first");if($(".custom-popwin").length){countNum(e)}else{changeGroupShow(e)}collectGroupName()}else{if(k.msg==="ban"){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_BAN_WORDS))}else{$(CSS_EM_TIPS,d).text(TXT_BAN_WORDS)}}}},"json")}else{if(!c){if(!$(CSS_EM_TIPS,d).length){$(CSS_INPUT_CREATE,d).after(TEMPL_TIPS.replace("{TIPS}",TXT_NULL_NAME))}else{$(CSS_EM_TIPS,d).text(TXT_NULL_NAME)}}}};collectGroupName();if(isIE6){$(CSS_SET_GROUP_LIST+' li:not(".last")').hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")})};
+</script>
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+
+
+
+
+
+
+<div class="top-nav-info">
+
+      <a href="https://www.douban.com/accounts/login?source=main" class="nav-login" rel="nofollow">登录</a>
+      <a href="https://www.douban.com/accounts/register?source=main" class="nav-register" rel="nofollow">注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+
+        <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+        <div id="top-nav-appintro" class="more-items">
+            <p class="appintro-title">豆瓣</p>
+            <p class="slogan">我们的精神角落</p>
+            <p class="qrcode">
+                扫码直接下载
+            </p>
+            <div class="download">
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+                <span>·</span>
+                <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+            </div>
+        </div>
+        <div id="doubanapp-tip">
+            <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 4.0 全新发布</a>
+            <a href="javascript: void 0;" class="tip-close">×</a>
+        </div>
+    </div>
+
+    <div class="global-nav-items">
+      <ul>
+
+
+            <li class="on">
+            <a href="https://www.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;0&#34;}">豆瓣</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;0&#34;}">读书</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://movie.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;0&#34;}">电影</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;0&#34;}">音乐</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;0&#34;}">同城</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;0&#34;}">小组</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;0&#34;}">阅读</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;0&#34;}">FM</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;0&#34;}">东西</a>
+            </li>
+
+
+            <li class="">
+            <a href="https://market.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;0&#34;}">市集</a>
+            </li>
+
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+
+                    <tr><td><a href="https://moment.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;0&#34;}">一刻</a></td></tr>
+
+                    <tr><td><a href="https://ypy.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;0&#34;}">一拍一</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+    <div class="nav-primary">
+      <div class="nav-search">
+        <form action="https://www.douban.com/search" method="get">
+          <fieldset>
+            <legend>搜索：</legend>
+            <label for="inp-query">搜索你感兴趣的内容和人...</label>
+            <div class="inp">
+              <input type="hidden" name="source" value="suggest">
+              <input id="inp-query" name="q" size="22" title="搜索搜索你感兴趣的内容和人..." maxlength="60" autocomplete="off"  value="Python">
+            </div>
+            <div class="inp-btn"><input type="submit" value="搜索"></div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="nav-logo">
+        <a href="https://www.douban.com">豆瓣社区</a>
+      </div>
+
+      <div class="nav-items">
+        <ul>
+          <li><a href="https://www.douban.com/">首页</a></li>
+          <li>
+              <a href="https://www.douban.com/explore/">浏览发现</a>
+              <img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" alt="new" />
+
+          </li>
+          <li>
+              <a href="https://www.douban.com/app/">移动应用</a>
+          </li>
+          <li>
+            <a href="https://www.douban.com/game/explore?dcs=sns-nav&amp;dcm=douban">游戏</a>
+          </li>
+          <li><a href="https://www.douban.com/online/">线上活动</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <div id="wrapper">
+
+
+
+<div id="content">
+
+    <h1>搜索: Python</h1>
+
+    <div class="grid-16-8 clearfix">
+
+
+        <div class="article">
+
+
+  <div class="mod-search">
+    <form action="https://www.douban.com/search" method="get">
+      <fieldset>
+        <legend>搜索：</legend>
+          <input type="hidden" name="cat" value="1001">
+        <div class="inp"><input placeholder="搜索你感兴趣的内容和人" autofocus name="q" size="22" maxlength="60" value="Python"></div>
+        <div class="inp-btn"><input type="submit" value="搜索"></div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="search-cate">
+    <ul>
+      <li><a href="/search?q=Python">全部</a></li>
+      <li class=""><a href="/search?cat=1025&amp;q=Python">图片</a></li>
+        <li><a href="/search?cat=1005&amp;q=Python">成员</a></li>
+        <li><a href="/search?cat=1019&amp;q=Python">小组</a></li>
+        <li><a href="/search?cat=2012&amp;q=Python">小站</a></li>
+        <li class=on><a href="/search?cat=1001&amp;q=Python">书籍</a></li>
+        <li><a href="/search?cat=1002&amp;q=Python">电影</a></li>
+        <li><a href="/search?cat=1003&amp;q=Python">音乐</a></li>
+        <li><a href="/search?cat=3114&amp;q=Python">游戏</a></li>
+        <li><a href="/search?cat=3065&amp;q=Python">条目</a></li>
+        <li><a href="/search?cat=1015&amp;q=Python">日记</a></li>
+        <li><a href="/search?cat=8018&amp;q=Python">市集</a></li>
+        <li><a href="/search?cat=3069&amp;q=Python">舞台剧</a></li>
+        <li><a href="/search?cat=1011&amp;q=Python">同城活动</a></li>
+        <li><a href="/search?cat=1008&amp;q=Python">地点</a></li>
+        <li><a href="/search?cat=3064&amp;q=Python">移动应用</a></li>
+    </ul>
+  </div>
+  <script>
+    Do(function(){
+      if ($.browser.msie && ($.browser.version|0) === 6) {
+          return;
+      }
+      $(window).scroll((function(){var g=$(document);var d=$(".search-cate");var f=d.find("ul");var e=parseInt($("body").css("padding-top"))+5;var c=d.offset().top-e;var b=d.width();var a;return function(h){if(a){window.clearTimeout(a)}a=window.setTimeout(function(){if(g.scrollTop()>=c){d.css({height:1});f.css({position:"fixed",width:b,top:e})}else{d.css({height:"auto"});f.css({position:"static",width:"auto"})}},0)}})());
+    });
+  </script>
+
+  <div class="search-result">
+    <!-- douban ad begin -->
+    <div id="dale_search_promo"></div>
+    <!-- douban ad end -->
+
+
+
+
+    <h2>
+        相关书籍:
+
+    </h2>
+
+        <div class="result-list">
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=http%3A%2F%2Fread.douban.com%2Febook%2F16691849%2F%3Fdcs%3Ddouban-search&amp;query=Python&amp;cat_id=1052&amp;type=search&amp;pos=0" target="_blank"
+        onclick="moreurl(this,{i:'0', query:'Python'})"
+        title="知乎周刊·编程小白学 Python（总第103期）" >
+        <img alt="知乎周刊·编程小白学 Python（总第103期）" src="https://img1.doubanio.com/view/ark_article_cover/retina/public/16691849.jpg?v=1449128541.0" width="48px" height="71.56px">
+      </a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>
+             [杂志]
+           </span>
+          <a href="https://www.douban.com/link2/?url=http%3A%2F%2Fread.douban.com%2Febook%2F16691849%2F%3Fdcs%3Ddouban-search&amp;query=Python&amp;cat_id=1052&amp;type=search&amp;pos=0" target="_blank"
+            onclick="moreurl(this,{i:'0', query:'Python'})" >
+            知乎周刊·编程小白学 Python（总第103期）
+          </a>
+          <span class="ic-mark ic-read-mark">有电子版</span>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar45"></span>
+        <span class="rating_nums">9.0</span>
+        <span>(309评价)</span>
+        <span class="subject-cast">zhihu.com / 2015-12-03 / 免费</span>
+  </div>
+
+      </div>
+        <p>可能你有一个伟大的想法要实现，就差一个程序员了。
+可能你对现在的工作不满意，想在简历上多一个闪亮的加分项，或者干脆成为一个程序员。
+可能你只是想把自己从乏味...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1886640%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=1" target="_blank" onclick="moreurl(this,{i: '1', query: 'Python', from: 'dou_search_book', sid: 1886640})" title="The Complete Monty Python&#39;s Flying Circus" ><img src="https://img3.doubanio.com/spic/s2721950.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1886640%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=1" target="_blank" onclick="moreurl(this,{i: '1', query: 'Python', from: 'dou_search_book', sid: 1886640})" >The Complete Monty Python&#39;s Flying Circus </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(少于10评价)</span>
+        <span class="subject-cast">Monty Python / Pantheon / 1989</span>
+  </div>
+
+      </div>
+        <p>Forty-five classic episodes of the most entertaining writing to have gone into television anywhere. The minister of silly walks, the dead parrot, banter in a...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2266854%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=2" target="_blank" onclick="moreurl(this,{i: '2', query: 'Python', from: 'dou_search_book', sid: 2266854})" title="Monty Python&#39;s Big Red Book" ><img src="https://img3.doubanio.com/spic/s2721953.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2266854%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=2" target="_blank" onclick="moreurl(this,{i: '2', query: 'Python', from: 'dou_search_book', sid: 2266854})" >Monty Python&#39;s Big Red Book </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(少于10评价)</span>
+        <span class="subject-cast">Graham Chapman / Methuen Publishing, Ltd. / 1984</span>
+  </div>
+
+      </div>
+        <p>Not that big...or particularly red.  Pages of silliness based on the original television series.</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1849937%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=3" target="_blank" onclick="moreurl(this,{i: '3', query: 'Python', from: 'dou_search_book', sid: 1849937})" title="Monty Python and the Holy Grail" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1849937%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=3" target="_blank" onclick="moreurl(this,{i: '3', query: 'Python', from: 'dou_search_book', sid: 1849937})" >Monty Python and the Holy Grail </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(少于10评价)</span>
+        <span class="subject-cast">Monty Python         Cdbmgs         48691 / BMG SPECIAL PRODUCTS / 2004</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2457738%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=4" target="_blank" onclick="moreurl(this,{i: '4', query: 'Python', from: 'dou_search_book', sid: 2457738})" title="The  Brand New Monty Python Papperbok (Methuen Humour)" ><img src="https://img1.doubanio.com/spic/s4266877.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2457738%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=4" target="_blank" onclick="moreurl(this,{i: '4', query: 'Python', from: 'dou_search_book', sid: 2457738})" >The  Brand New Monty Python Papperbok (Methuen Humour) </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Monty Python                                                                                         / Methuen Publishing Ltd / 2007</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F12237786%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=5" target="_blank" onclick="moreurl(this,{i: '5', query: 'Python', from: 'dou_search_book', sid: 12237786})" title="QI Boxset" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F12237786%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=5" target="_blank" onclick="moreurl(this,{i: '5', query: 'Python', from: 'dou_search_book', sid: 12237786})" >QI Boxset </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Monty Python</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F12278078%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=6" target="_blank" onclick="moreurl(this,{i: '6', query: 'Python', from: 'dou_search_book', sid: 12278078})" title="The Complete Monty Python&amp;#039;s Flying Circus" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F12278078%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=6" target="_blank" onclick="moreurl(this,{i: '6', query: 'Python', from: 'dou_search_book', sid: 12278078})" >The Complete Monty Python&amp;#039;s Flying Circus </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Monty Python</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F11976147%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=7" target="_blank" onclick="moreurl(this,{i: '7', query: 'Python', from: 'dou_search_book', sid: 11976147})" title="Monty Python Flying Circus - Just the Words" ><img src="https://img1.doubanio.com/spic/s11842918.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F11976147%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=7" target="_blank" onclick="moreurl(this,{i: '7', query: 'Python', from: 'dou_search_book', sid: 11976147})" >Monty Python Flying Circus - Just the Words </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Monty Python</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F11976406%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=8" target="_blank" onclick="moreurl(this,{i: '8', query: 'Python', from: 'dou_search_book', sid: 11976406})" title="The Brand New &amp;quot;Monty Python&amp;quot;Papperbok" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F11976406%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=8" target="_blank" onclick="moreurl(this,{i: '8', query: 'Python', from: 'dou_search_book', sid: 11976406})" >The Brand New &amp;quot;Monty Python&amp;quot;Papperbok </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Monty Python</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2808437%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=9" target="_blank" onclick="moreurl(this,{i: '9', query: 'Python', from: 'dou_search_book', sid: 2808437})" title="The Pythons" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F2808437%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=9" target="_blank" onclick="moreurl(this,{i: '9', query: 'Python', from: 'dou_search_book', sid: 2808437})" >The Pythons </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Chapman, Graham/ Palin, Michael/ Cleese, John/ Gilliam, Terry/ Idle, Eric/ Jones, Terry/ Monty Python (COR)/ McCabe, Bob (CON) / St Martins Pr</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1755900%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=10" target="_blank" onclick="moreurl(this,{i: '10', query: 'Python', from: 'dou_search_book', sid: 1755900})" title="A Million Little Pieces of Feces" ><img src="https://img1.doubanio.com/spic/s2398498.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1755900%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=10" target="_blank" onclick="moreurl(this,{i: '10', query: 'Python', from: 'dou_search_book', sid: 1755900})" >A Million Little Pieces of Feces </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Python Bonkers / Lulu Press / 2006</span>
+  </div>
+
+      </div>
+        <p>(Selected excerpts and outside reviews can be found by clicking on the blue Python Bonkers hyperlink.) This book may share an alphabetical lineage with the F...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F4090057%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=11" target="_blank" onclick="moreurl(this,{i: '11', query: 'Python', from: 'dou_search_book', sid: 4090057})" title="Monty Python&#39;s Big Red Book" ><img src="https://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F4090057%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=11" target="_blank" onclick="moreurl(this,{i: '11', query: 'Python', from: 'dou_search_book', sid: 4090057})" >Monty Python&#39;s Big Red Book </a>
+        </h3>
+
+  <div class="rating-info">
+        <span>(目前无评价)</span>
+        <span class="subject-cast">Terry Jones,  John Gleese, Eric Idle,  Michael Palen ) Python Monty ( Graham Chapman / Methuen young books / 1971</span>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=http%3A%2F%2Fread.douban.com%2Febook%2F284513%2F%3Fdcs%3Ddouban-search&amp;query=Python&amp;cat_id=1052&amp;type=search&amp;pos=12" target="_blank"
+        onclick="moreurl(this,{i:'12', query:'Python'})"
+        title="Django入门教程" >
+        <img alt="Django入门教程" src="https://img3.doubanio.com/view/ark_article_cover/retina/public/284513.jpg?v=1395395652.0" width="48px" height="71.56px">
+      </a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>
+             [自出版]
+           </span>
+          <a href="https://www.douban.com/link2/?url=http%3A%2F%2Fread.douban.com%2Febook%2F284513%2F%3Fdcs%3Ddouban-search&amp;query=Python&amp;cat_id=1052&amp;type=search&amp;pos=12" target="_blank"
+            onclick="moreurl(this,{i:'12', query:'Python'})" >
+            Django入门教程
+          </a>
+          <span class="ic-mark ic-read-mark">有电子版</span>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar40"></span>
+        <span class="rating_nums">8.4</span>
+        <span>(175评价)</span>
+        <span class="subject-cast">〔美〕Django社区 / 2013-03-11 / 免费</span>
+  </div>
+
+      </div>
+        <p>本书翻译自 Django 最新版 1.4.1 的官方文档“ Django Tutorial: Writing your first Django app ”。第一部分先对 Django 的 MVC 模式开发做了全景式介绍；接下来的部...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3117898%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=13" target="_blank" onclick="moreurl(this,{i: '13', query: 'Python', from: 'dou_search_book', sid: 3117898})" title="Python源码剖析" ><img src="https://img3.doubanio.com/spic/s3435132.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3117898%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=13" target="_blank" onclick="moreurl(this,{i: '13', query: 'Python', from: 'dou_search_book', sid: 3117898})" >Python源码剖析 </a>
+            <span class="ic-mark ic-read-mark">有电子版</span>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar45"></span>
+        <span class="rating_nums">8.7</span>
+        <span>(596评价)</span>
+        <span class="subject-cast">陈儒 / 电子工业出版社 / 2008</span>
+  </div>
+
+      </div>
+        <p>作为主流的动态语言，Python不仅简单易学、移植性好，而且拥有强大丰富的库的支持。此外，Python强大的可扩展性，让开发人员既可以非常容易地利用C/C++编写Python的扩展...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F4866934%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=14" target="_blank" onclick="moreurl(this,{i: '14', query: 'Python', from: 'dou_search_book', sid: 4866934})" title="Python基础教程" ><img src="https://img3.doubanio.com/spic/s4387251.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F4866934%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=14" target="_blank" onclick="moreurl(this,{i: '14', query: 'Python', from: 'dou_search_book', sid: 4866934})" >Python基础教程 </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar40"></span>
+        <span class="rating_nums">8.0</span>
+        <span>(1326评价)</span>
+        <span class="subject-cast">Magnus Lie Hetland / 司维 / 人民邮电出版社 / 2010</span>
+  </div>
+
+      </div>
+        <p>本书是经典教程的全新改版，作者根据Python 3.0版本的种种变化，全面改写了书中内容，做到既能“瞻前”也能“顾后”。本书层次鲜明、结构严谨、内容翔实，特别是在最后...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3112503%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=15" target="_blank" onclick="moreurl(this,{i: '15', query: 'Python', from: 'dou_search_book', sid: 3112503})" title="Python核心编程（第二版）" ><img src="https://img3.doubanio.com/spic/s3140466.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3112503%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=15" target="_blank" onclick="moreurl(this,{i: '15', query: 'Python', from: 'dou_search_book', sid: 3112503})" >Python核心编程（第二版） </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar40"></span>
+        <span class="rating_nums">7.7</span>
+        <span>(1245评价)</span>
+        <span class="subject-cast">[美]Wesley J. Chun（陳仲才） / CPUG / 人民邮电出版社 / 2008</span>
+  </div>
+
+      </div>
+        <p>本书是Python开发者的完全指南——针对 Python 2.5全面升级
+·学习专业的Python风格、最佳实践和好的编程习惯；
+·加强对Python对象、内存模型和Python面向对象特性的深...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1440658%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=16" target="_blank" onclick="moreurl(this,{i: '16', query: 'Python', from: 'dou_search_book', sid: 1440658})" title="Dive Into Python" ><img src="https://img3.doubanio.com/spic/s4180565.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F1440658%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=16" target="_blank" onclick="moreurl(this,{i: '16', query: 'Python', from: 'dou_search_book', sid: 1440658})" >Dive Into Python </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar45"></span>
+        <span class="rating_nums">8.3</span>
+        <span>(1075评价)</span>
+        <span class="subject-cast">Mark Pilgrim / Apress / 2004</span>
+  </div>
+
+      </div>
+        <p>Dive Into Python 是为有经验的程序员编写的一本 Python 书。</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3948354%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=17" target="_blank" onclick="moreurl(this,{i: '17', query: 'Python', from: 'dou_search_book', sid: 3948354})" title="Python学习手册" ><img src="https://img1.doubanio.com/spic/s3952568.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3948354%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=17" target="_blank" onclick="moreurl(this,{i: '17', query: 'Python', from: 'dou_search_book', sid: 3948354})" >Python学习手册 </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar40"></span>
+        <span class="rating_nums">8.2</span>
+        <span>(748评价)</span>
+        <span class="subject-cast">Mark Lutz / 侯靖 / 机械工业出版社 / 2009</span>
+  </div>
+
+      </div>
+        <p>《Python学习手册(第3版)》讲述了：Python可移植、功能强大、易于使用，是编写独立应用程序和脚本应用程序的理想选择。无论你是刚接触编程或者刚接触Python，通过学习《...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3884108%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=18" target="_blank" onclick="moreurl(this,{i: '18', query: 'Python', from: 'dou_search_book', sid: 3884108})" title="可爱的Python" ><img src="https://img1.doubanio.com/spic/s3901817.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F3884108%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=18" target="_blank" onclick="moreurl(this,{i: '18', query: 'Python', from: 'dou_search_book', sid: 3884108})" >可爱的Python </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar40"></span>
+        <span class="rating_nums">7.4</span>
+        <span>(708评价)</span>
+        <span class="subject-cast">哲思社区 / 电子工业出版社 / 2009</span>
+  </div>
+
+      </div>
+        <p>本书的内容主要来自CPyUG社区的邮件列表，由Python的行者根据自身经验组织而成，是为从来没有听说过Python的其他语言程序员准备的一份实用的导学性质的书。笔者试图将优...</p>
+    </div>
+  </div>
+
+
+
+  <div class="result">
+    <div class="pic">
+      <a class="nbg" href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F5948760%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=19" target="_blank" onclick="moreurl(this,{i: '19', query: 'Python', from: 'dou_search_book', sid: 5948760})" title="A Byte of Python" ><img src="https://img3.doubanio.com/spic/s4612135.jpg"></a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <span>[书籍]</span>&nbsp;<a href="https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F5948760%2F&amp;query=Python&amp;cat_id=1001&amp;type=search&amp;pos=19" target="_blank" onclick="moreurl(this,{i: '19', query: 'Python', from: 'dou_search_book', sid: 5948760})" >A Byte of Python </a>
+        </h3>
+
+  <div class="rating-info">
+        <span class="allstar45"></span>
+        <span class="rating_nums">8.8</span>
+        <span>(849评价)</span>
+        <span class="subject-cast">Swaroop C H / 沈洁元 / Lulu Marketplace / 2008</span>
+  </div>
+
+      </div>
+        <p>&#39;A Byte of Python&#39; is a book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If al...</p>
+    </div>
+  </div>
+
+            <div class="result-list-ft">
+              <a href="#more" class="j a_search_more" data-q="Python" data-start="20" data-cat="1001">显示更多</a>
+            </div>
+        </div>
+
+  </div>
+
+
+  <div class="back-to-top">
+    <a href="#">&#8593;回顶部</a>
+  </div>
+  <script>
+    Do(function() {
+      $("html").delegate(".a_search_more","click",function(c){c.preventDefault();var b=$(this);if(b.hasClass("processing")){return}var a=b.data();b.attr("title",b.text()).text("加载中...");b.addClass("processing");$.get("/j/search",a,function(d){if(d.r){b.text("加载失败...");return}b.removeClass("processing");b.text(b.attr("title"));b.data("start",parseInt(b.data("start"),10)+d.limit);$(d.items.join("")).insertBefore(b.parent());if(!d.more){b.hide()}})});
+      (function(){var h=$(window);var k=$(document);var l;var a=$(".back-to-top");var b=$("#content").find(".article");var g;var i=$("#content").find(".search-result");var d=$.browser.msie&&$.browser.version==="6.0";var f=function(n){if(!f.cache){f.cache=[]}if(f.cache[n]){return}var m=new Date;(new Image()).src="/stat.html?source=group&action=back_top&iden="+n+"&month="+(m.getMonth()+1)+"&day="+m.getDate()+"&timestamp="+(+new Date);f.cache[n]=1};var e=function(){return i.offset().top+i.outerHeight()};var c=function(m){if(m+g>=e()){a.css({position:"absolute",bottom:"",top:e()-a.outerHeight()})}else{if(!d){a.css({position:"fixed",top:"",bottom:0})}}a.show().find("a").stop().animate({top:0})};var j=function(){a.hide().find("a").css("top",40)};h.resize(function(){g=h.height();a.css("left",b.offset().left+b.width()+80);l=k.height()/g>3?Math.max(2*g,$(".side").height()):0});h.trigger("resize");h.scroll((function(){var m;return function(){if(m){clearTimeout(m)}setTimeout(function(){if(l===0){return}var n=k.scrollTop();if(n>l){c(n)}else{j()}},100)}})());a.find("a").click(function(m){m.preventDefault();k.scrollTop(0)});if(d){h.scroll(function(){if(k.scrollTop()+g>=e()){return}a.css("top",k.scrollTop()+g-a.height())})}})();
+    });
+  </script>
+
+        </div>
+        <div class="aside">
+
+
+
+
+
+<div class="mod" id="search-side-entry">
+    <div class="hd">
+        <span class="more">
+            <a href="https://market.douban.com/?r=11&category=search_side_entry" target="_blank">&gt;更多</a>
+        </span>
+        <h2>豆瓣市集的推荐</h2>
+    </div>
+    <div class="bd">
+      <ul>
+        <li>
+        <a href="https://market.douban.com/item/92443/" target="_blank"><img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p460372.jpg"></a>
+        <i class="price">120.00</i>&nbsp;
+        <del class="price">135.00</del>
+        <span class="promotion"><a href="https://market.douban.com/item/76338/" target="_blank">完美春...</a></span>
+        <li>
+        <a href="https://market.douban.com/item/85182/" target="_blank"><img src="https://img3.doubanio.com/view/dianpu_product_item/medium/public/p424254.jpg"></a>
+        <i class="price">660.00</i>&nbsp;
+        <span class="promotion"><a href="https://market.douban.com/item/72201/" target="_blank">简单生...</a></span>
+    </div>
+</div>
+
+
+  <!-- douban ad begin -->
+  <div id="dale_subject_search_top_right"></div>
+  <!-- douban ad end -->
+
+
+
+    <div class="mod">
+      <div class="hd">
+
+    <h2>
+        豆瓣还没有这本书，我来添加
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+      </div>
+      <div class="bd">
+          <p class="pl">
+            <a href="https://book.douban.com/new_subject?cat=1001&amp;search_text=Python" rel="nofollow">&gt;&nbsp;添加书籍</a>
+          </p>
+          <p class="pl">
+            <a href="https://book.douban.com/new_subject?cat=1009&amp;search_text=Python" rel="nofollow">&gt;&nbsp;添加杂志</a>
+          </p>
+          <p class="pl">
+            <a href="https://book.douban.com/series/add?name=Python" rel="nofollow">&gt;&nbsp;添加丛书</a>
+          </p>
+      </div>
+    </div>
+
+
+  <div class="search_report">
+    <a target="_blank" href="https://www.douban.com/misc/search_report?cat=1001&amp;q=Python">&gt; 对结果不满意？让我们知道</a>
+  </div>
+
+        </div>
+        <div class="extra">
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+
+    · <a href="https://help.douban.com/?app=main" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+    </div>
+    <script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/5e01bcba83400361.js"></script>
+
+  <!-- douban ad begin -->
+
+
+
+
+
+
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '',
+            browserId = 'laU6VKx6hiQ',
+            criteria = '8:Python|3:/search?cat=1001&amp;q=Python',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_subject_search_top_right', 'dale_search_promo'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'https://img3.doubanio.com/f/shire/256711a2a3fa720df625257c30ea5ab0062c8c9f/js/ad.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+  <!-- douban ad end -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5WP579" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5WP579');</script>
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7019765-1']);
+_gaq.push(['_setCampNameKey', 'dcn']);
+_gaq.push(['_setCampSourceKey', 'dcs']);
+_gaq.push(['_setCampMediumKey', 'dcm']);
+_gaq.push(['_setCampTermKey', 'dct']);
+_gaq.push(['_setCampContentKey', 'dcc']);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'youdao', 'q']);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+_gaq.push(['_addOrganic', 'vnet', 'kw']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣']);
+_gaq.push(['_addIgnoredOrganic', 'douban']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣网']);
+_gaq.push(['_addIgnoredOrganic', 'www.douban.com']);
+_gaq.push(['_setDomainName', '.douban.com']);
+
+
+    _gaq.push(['_setCustomVar', 1, 'responsive_view_mode', 'desktop', 3]);
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}
+</script>
+
+
+
+
+
+    <!-- dis11-docker-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
