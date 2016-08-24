@@ -1,0 +1,1259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>按医生名称查询页面---四川大学华西临床医学院/华西医院</title>
+<meta content="四川大学华西医院,华西医院,川医,华西医学网,华西,成都医院,四川医院,成都川医,四川华西医院,四川川医,华西,华西临床医学院" name="keywords">
+<meta content="四川大学华西医院医院占地700余亩，业务用房面积30余万平方米，开放床位4300张，职工6100余人；设38个临床科室，16个医技科室。2008年门诊量255.7万人次，出院病人12.3万人次，手术6.3万台次，平均住院日10.59天" name="description">
+<link rel="stylesheet" type="text/css" href="/css/default.css" />
+<link rel="stylesheet" type="text/css" href="/css/huaxiTab.css" />
+<link rel="stylesheet" type="text/css" href="/css/regedit.css" />
+<link href="/r/cms/front.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/red/css/index.css" />
+<link rel="stylesheet" type="text/css" href="/r/cms/www/css/lh.css" />
+<!-- calendar -->
+<link href="/js/patient_query/css/search.css"  rel="stylesheet" type="text/css"/>
+<link href="/css/first-index-html.css" rel="stylesheet" type="text/css"/>
+<link href='/js/calendar/fullcalendar.css' rel='stylesheet' />
+<link href='/js/calendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link rel='stylesheet' href='/js/calendar/jquery-ui.min.css' />
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src='/js/calendar/jquery.min.js'></script>
+<script src='/js/calendar/jquery-ui.custom.min.js'></script>
+<script src='/js/calendar/fullcalendar.js'></script>
+</head>
+<body>
+<style>
+.emaildiv {margin-top:-19px;height: 19px;float: right;}
+.fl{float:left;}
+.fr{float:right;}
+.clear1{clear:both;display:block;overflow:hidden;height:0;line-height:0;}
+.pd20{padding:10px;}
+.pd50{padding:50px;}
+.tL {text-align: center;margin-left:440px;margin-top:4px;}
+.tC {text-align: center;}
+.tX{text-align: center;margin: 0px 0 0 300px;}
+#loginalert{width:680px;height:450px;background:#fff;border-bottom:1px solid #eee;z-index:999;position:fixed;top:-600px;left:50%;margin-left:-220px;_margin-left:500px;z-index:99;display:none;}
+#loginalert1{width:740px;height:400px;background:#fff;position:fixed;z-index:999;top:600px;left:50%;margin-left:-350px;_margin-left:500px;z-index:99;display:none;}
+.closealert{width:20px;height:20px;cursor:pointer;background:url('/images/close-icons.png') no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.closealert:hover{transform:rotate(-180deg);-moz-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
+.loginwrap{width:340px;margin:0 auto;margin-top: 14px;margin-right: 20px}
+.loginh{height:40px;*margin-top:7px;}
+.loginh .fl{font-size:20px;line-height:40px;color:#292929;}
+.loginh .fr{font-size:15px;line-height:50px;color:#707070;}
+.loginh .fr a{font-size:18px;line-height:50px;color:#FF4200;margin-left:5px;}
+.loginwrap h3{font-size:14px;font-weight:500;height:22px;margin-top:15px;color:#292929;}
+.loginbtn{color:#6B6A6A;width:340px;height:90px;+height:50px;}
+.logininput input{display:block;height:14px;line-height:14px;width:100%;border:#DAE2E5 1px solid;text-indent:10px;overflow:hidden;color:#979696;padding-top:13px;padding-bottom:13px;}
+.logininput .loginusername{margin-top:15px;margin-bottom:10px;}
+.logininput .loginuserpasswordt{margin-top:15px;margin-bottom:10px;}
+.logininput .logincaptcha{width:30%;}
+.capchadiv{float:right; position:relative; top:-40px;}
+.loginsubmit{height:40px;margin:15px 20px 0 0;madisplay:inline;margin-right: 10px}
+.loginsubmit .btn{width:156px;height:32px;line-height:40px;overflow:hidden;color:#fff;background:#00bc0c;display:block;text-align:center;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.button {width:340px;height:32px;border-radius: 1px;}
+.btn-green {height: 40px;line-height: 40px;background-color: #00c030;display:block;text-align:center;color:#fff;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.loginpd{border-bottom:1px solid #ecf2f5;}
+.thirdlogin .pd50{padding-top:5px;padding-bottom:30px;}
+.thirdlogin h4{color:#6B6A6A;font-weight:500;margin-bottom:20px;}
+.thirdlogin ul li{display:inline;float:left;margin:10px 10px 10px 0;}
+.thirdlogin ul li a{display:block;float:left;height:40px;line-height:40px;width:160px;color:#fff;text-indent:60px;}
+ #weixin {margin:10px 10px 10px 0;display:inline;float:left;height: 50px;width: 290px;}
+.loginwrap .login_warning{height:20px;line-height:20px;overflow:hidden;background:#ff7200;color:#fff;padding:0 4px;float:left;text-align:center;font-size:12px;margin-left:14px;display:inline-block;}
+.nav ul{overflow: auto;}
+.nBg {width:100%;}.emaildiv {margin-top:-19px;height: 19px;float: right;}
+.fl{float:left;}
+.fr{float:right;}
+.clear1{clear:both;display:block;overflow:hidden;height:0;line-height:0;}
+.pd20{padding:10px;}
+.pd50{padding:50px;}
+.tL {text-align: center;margin-left:440px;margin-top:4px;}
+.tC {text-align: center;}
+.tX{text-align: center;margin: 0px 0 0 300px;}
+#loginalert{width:680px;height:450px;background:#fff;border-bottom:1px solid #eee;position:fixed;top:-600px;left:50%;margin-left:-220px;_margin-left:500px;z-index:999;display:none;}
+#loginalert1{width:740px;height:400px;background:#fff;position:fixed;top:600px;left:50%;margin-left:-350px;_margin-left:500px;z-index:999;display:none;}
+.closealert{width:20px;height:20px;cursor:pointer;background:url('/images/close-icons.png') no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.closealert:hover{transform:rotate(-180deg);-moz-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
+.loginwrap{width:340px;margin:0 auto;margin-top: 14px;margin-right: 20px}
+.loginh{height:40px;*margin-top:7px;}
+.loginh .fl{font-size:20px;line-height:40px;color:#292929;}
+.loginh .fr{font-size:15px;line-height:50px;color:#707070;}
+.loginh .fr a{font-size:18px;line-height:50px;color:#FF4200;margin-left:5px;}
+.loginwrap h3{font-size:14px;font-weight:500;height:22px;margin-top:15px;color:#292929;}
+.loginbtn{color:#6B6A6A;width:340px;height:90px;+height:50px;}
+.logininput input{display:block;height:14px;line-height:14px;width:100%;border:#DAE2E5 1px solid;text-indent:10px;overflow:hidden;color:#979696;padding-top:13px;padding-bottom:13px;}
+.logininput .loginusername{margin-top:15px;margin-bottom:10px;}
+.logininput .loginuserpasswordt{margin-top:15px;margin-bottom:10px;}
+.logininput .logincaptcha{width:30%;}
+.capchadiv{float:right; position:relative; top:-40px;}
+.loginsubmit{height:40px;margin:15px 20px 0 0;madisplay:inline;margin-right: 10px}
+.loginsubmit .btn{width:156px;height:32px;line-height:40px;overflow:hidden;color:#fff;background:#00bc0c;display:block;text-align:center;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.button {width:340px;height:32px;border-radius: 1px;}
+.btn-green {height: 40px;line-height: 40px;background-color: #00c030;display:block;text-align:center;color:#fff;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.loginpd{border-bottom:1px solid #ecf2f5;}
+.thirdlogin .pd50{padding-top:5px;padding-bottom:30px;}
+.thirdlogin h4{color:#6B6A6A;font-weight:500;margin-bottom:20px;}
+.thirdlogin ul li{display:inline;float:left;margin:10px 10px 10px 0;}
+.thirdlogin ul li a{display:block;float:left;height:40px;line-height:40px;width:160px;color:#fff;text-indent:60px;}
+ #weixin {margin:10px 10px 10px 0;display:inline;float:left;height: 50px;width: 290px;}
+.loginwrap .login_warning{height:20px;line-height:20px;overflow:hidden;background:#ff7200;color:#fff;padding:0 4px;float:left;text-align:center;font-size:12px;margin-left:14px;display:inline-block;}
+.nav ul{overflow: auto;}
+.nBg {width:100%;}.emaildiv {margin-top:-19px;height: 19px;float: right;}
+.fl{float:left;}
+.fr{float:right;}
+.clear1{clear:both;display:block;overflow:hidden;height:0;line-height:0;}
+.pd20{padding:10px;}
+.pd50{padding:50px;}
+.tL {text-align: center;margin-left:440px;margin-top:4px;}
+.tC {text-align: center;}
+.tX{text-align: center;margin: 0px 0 0 300px;}
+#loginalert{width:680px;height:450px;background:#fff;border-bottom:1px solid #eee;position:fixed;top:-600px;left:50%;margin-left:-220px;_margin-left:500px;z-index:999;display:none;}
+#loginalert1{width:740px;height:400px;background:#fff;position:fixed;top:600px;left:50%;margin-left:-350px;_margin-left:500px;z-index:999;display:none;}
+.closealert{width:20px;height:20px;cursor:pointer;background:url('/images/close-icons.png') no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.closealert:hover{transform:rotate(-180deg);-moz-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
+.loginwrap{width:340px;margin:0 auto;margin-top: 14px;margin-right: 20px}
+.loginh{height:40px;*margin-top:7px;}
+.loginh .fl{font-size:20px;line-height:40px;color:#292929;}
+.loginh .fr{font-size:15px;line-height:50px;color:#707070;}
+.loginh .fr a{font-size:18px;line-height:50px;color:#FF4200;margin-left:5px;}
+.loginwrap h3{font-size:14px;font-weight:500;height:22px;margin-top:15px;color:#292929;}
+.loginbtn{color:#6B6A6A;width:340px;height:90px;+height:50px;}
+.logininput input{display:block;height:14px;line-height:14px;width:100%;border:#DAE2E5 1px solid;text-indent:10px;overflow:hidden;color:#979696;padding-top:13px;padding-bottom:13px;}
+.logininput .loginusername{margin-top:15px;margin-bottom:10px;}
+.logininput .loginuserpasswordt{margin-top:15px;margin-bottom:10px;}
+.logininput .logincaptcha{width:30%;}
+.capchadiv{float:right; position:relative; top:-40px;}
+.loginsubmit{height:40px;margin:15px 20px 0 0;madisplay:inline;margin-right: 10px}
+.loginsubmit .btn{width:156px;height:32px;line-height:40px;overflow:hidden;color:#fff;background:#00bc0c;display:block;text-align:center;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.button {width:340px;height:32px;border-radius: 1px;}
+.btn-green {height: 40px;line-height: 40px;background-color: #00c030;display:block;text-align:center;color:#fff;font-size:20px;border:none;font-family:'寰蒋闆呴粦';cursor:pointer;}
+.loginpd{border-bottom:1px solid #ecf2f5;}
+.thirdlogin .pd50{padding-top:5px;padding-bottom:30px;}
+.thirdlogin h4{color:#6B6A6A;font-weight:500;margin-bottom:20px;}
+.thirdlogin ul li{display:inline;float:left;margin:10px 10px 10px 0;}
+.thirdlogin ul li a{display:block;float:left;height:40px;line-height:40px;width:160px;color:#fff;text-indent:60px;}
+ #weixin {margin:10px 10px 10px 0;display:inline;float:left;height: 50px;width: 290px;}
+.loginwrap .login_warning{height:20px;line-height:20px;overflow:hidden;background:#ff7200;color:#fff;padding:0 4px;float:left;text-align:center;font-size:12px;margin-left:14px;display:inline-block;}
+.nav ul{overflow: auto;}
+.nBg {width:100%;}
+.login-mc-iii{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background:rgba(0,0,0,0.2);
+	display:none;
+	z-index:998;
+}
+</style>
+<script type="text/javascript" src="/js/jumpwap.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.min.js"></script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+<div class="loginmask"></div>
+<div class="login-mc-iii"></div>
+<div id="loginalert">
+	<div class="pd20 loginpd">
+		<h3>
+			<i class="closealert fr"></i>
+			<div class="clear"></div>
+		</h3>
+		<div style="width: 300px;height: 0;text-align: left">
+			<div id="weixin"></div>
+		</div>
+		<div class="loginwrap fr">
+			<div class="loginh">
+			     <div class="fl">会员注册 | 登录</div>
+			</div>
+			<form action="/loginNewMethod.jspx" method="post" >
+				<div class="logininput">
+					<input type="text" name="username" id="username"
+						class="loginusername"  placeholder="用户名/Email" vld="{required:true}"/> <input
+						type="hidden" name="usertype" > <input
+						type="password" name="password" class="loginuserpasswordt" id="password"
+						placeholder="密码" vld="{required:true,rangelength:[6,12]}"/>
+					<div>
+						<input type="text" name="captcha" id="captcha" vld="{required:true}"
+							class="logincaptcha" placeholder="验证码" />
+					</div>
+					<div class="capchadiv">
+						<img src="/captcha.svl"
+							onclick="this.src='/captcha.svl?d='+new Date()*1"
+							width="60px" height="40px">(点击刷新)
+					</div>
+         			<input type=hidden id="returnUrl" name="returnUrl" value=""/>
+         			<input type=hidden id="quoteUrl" name="quoteUrl"  value=""/>
+				</div>
+				<div class="loginbtn tC">
+					<div class="loginsubmit">
+						<button type="submit"  class="button btn-green" >会员登录</button>
+					</div>
+				</div>
+				<div class="loginh">
+			    <div class="fr">
+					还没有账号<a id="sigup_now" href="/register.jspx" style="text-decoration:none;">立即注册</a>
+                    <a href="/forgot_password.jspx">找回密码</a></div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<div class="hd">
+	<div class="hdBox">
+		<div class="hxlogo">
+			<a href="/"><img src="/images/logo.gif" width="319"
+				height="117" alt="" /></a>
+		</div>
+		<div class="map tR">
+			<div class="tL">
+				&nbsp;<img alt="" src="/images/acount.gif">欢迎来到华西医院！
+					<a href="javascript:void(0);" class="openlogin" id="opener"
+					style="font-color:black; color:black" style="text-decoration:none;">[请登录]</a> <a
+					href="/register.jspx" style="text-decoration:none;">免费注册</a>&nbsp;|&nbsp;
+			</div>
+			<div class="emaildiv" >
+				+ <a href="http://eng.cd120.com" target="_blank">English</a> | <span>
+					<img src="/images/map.png" alt="">
+				</span> <span><a href="http://mail.cd120.com" target="_blank">站内邮箱登陆</a></span>
+			</div>
+		</div>
+		<div class="searchBox">
+			<form action="/search.jspx" target="_blank" id="searchform">
+				<span> <input class="shIpt" name="q" value="请输入关键词"
+					type="text" id="txtKey"
+					onfocus="if(this.value=='请输入关键词')this.value=''"
+					onblur="if(this.value=='')this.value='请输入关键词'" maxlength="24"
+					autocomplete="off" />
+				</span> <span class="sh bold"><a href="#" id="ss" onclick=test();>搜
+						索</a> </span>
+			</form>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="/" target="_self">首 页</a></li> 				<li><a href="/xygk/index.jhtml" target="_blank">医院概况</a></li> 				<li><a href="http://www.cd120.com/htmlylfwjiuyizhinan/index.jhtml" target="_blank">患者服务</a></li> 				<li><a href="http://yxjy.cd120.com/" target="_blank">医学教育</a></li> 				<li><a href="http://kxyj.cd120.com:8080/" target="_blank">科学研究</a></li> 				<li><a href="/hxyc/index.jhtml" target="_blank">华西远程</a></li>
+
+				<li><a href="http://sj.cd120.com/" target="_blank">分院</a></li>
+			</ul>
+		</div>
+		<!--End nav-->
+	</div>
+	<div class="nBg clear"></div>
+</div>
+<script type="text/javascript">
+	 var obj = new WxLogin({
+            id:"weixin",
+            appid: "wx4b95b62107994d2e",
+            scope: "snsapi_login",
+            redirect_uri: "http://www.cd120.com/wechatCallBack.jspx",
+            state: "0",
+            style: "black",
+            href: ""
+          });
+	function test() {
+		$("#searchform").submit();
+	}
+	var uservalue = $("#uservalue").html();
+	if(uservalue!=null){
+		var matchvalue = uservalue.match("109");
+		if(matchvalue!=null){
+			uservalue = uservalue.substr(3);
+			var subnumber = 0;
+			for(var i=0;i<13;i++){
+				if(uservalue.charAt(i)=='0'){
+					subnumber++;
+				}else{
+					break;
+				}
+			}
+			uservalue = uservalue.substr(subnumber);
+			$("#uservalue").html(uservalue);
+		}
+	}
+
+	$(document).ready(function(){
+	var k=!0;
+
+	$(".loginmask").css("opacity",0.8);
+
+
+	$(".thirdlogin ul li:odd").css({marginRight:0});
+
+	$(".openlogin").click(function(){
+		k&&"0px"!=$("#loginalert").css("top")&& ($("#loginalert").show(),$(".loginmask").fadeIn(500),$("#loginalert").animate({top:0},400,"easeOutQuart"));
+		$('.login-mc-iii').show();
+	});
+
+	$(".loginmask,.closealert").click(function(){
+		k&&(k=!1,$("#loginalert").animate({top:-600},400,"easeOutQuart",function(){$("#loginalert").hide();k=!0}),$(".loginmask").fadeOut(500));
+		$('.login-mc-iii').hide();
+	});
+
+
+	$("#sigup_now,.reg a").click(function(){
+		$("#reg_setp,#setp_quicklogin").show();
+		$("#reg_setp").animate({left:0},500,"easeOutQuart")
+	});
+
+	$(".back_setp").click(function(){
+		"block"==$("#setp_quicklogin").css("display")&&$("#reg_setp").animate({left:"100%"},500,"easeOutQuart",function(){$("#reg_setp,#setp_quicklogin").hide()})
+	});
+
+	});
+
+
+
+</script>
+
+
+    <div class="col_xs_12">
+        <div class="Disease sameW sameMar">
+<div class="col_xs_12 tag">
+	<p>预约挂号:
+		<a href="/appointDisease.jspx">按疾病分诊查询</a>
+		<a href="/appointDoctor.jspx">按医生查询</a>
+		<a href="/tzNotice.jspx">停诊通知</a>
+		<a href="/hxwechat.html" target="_blank">官方微信预约</a>
+		<a href="/hxapp.html" target="_blank">官方APP预约</a>
+	</p>
+</div>            <div class="path">
+            您现在的位置 : <a href="/">首页</a> > <a>医生列表</a>
+        </div>
+        <div class="posRe" style="margin-top: 18px;"><p class="posAbL tips">温馨提示：搜索列表的号源更新可能会有延迟，以实际挂号为准，不可预约当天号源！</p><img src="/r/cms/www/img/tip.png" alt=""/></div>
+    </div>
+
+    <div class="sameMar sameW bookList">
+    	<form action="findDoctorListByRegService.jspx" method="get" id="tableForm">
+	        	<table class="table" >
+	        	<tr>
+	        		<td width="12%" style="text-align: center;">头像</td>
+	        		<td width="15%" style="text-align: center;">姓名</td>
+	        		<td width="7%" style="text-align: center;">专家级别</td>
+	        		<td width="13%" style="text-align: center;">亚专业</td>
+	        		<td width="52%" style="text-align: center;">出诊时间</td>
+	        	</tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=0525&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-0525-head.png" alt="张波(精)"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=0525&clinnicId=288&regCode=33"><i>张波(精)</i></a></span>
+		                </td>
+		                <td width="7%"><span>副教授</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='0525';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-08-30',url:''},{title:'下午-无号',start:'2016-08-31',url:''},{title:'上午-无号',start:'2016-09-06',url:''},{title:'下午-无号',start:'2016-09-07',url:''},{title:'上午-无号',start:'2016-09-20',url:''},{title:'下午-有号',start:'2016-09-20',url:'appointConfirm.jspx?resource=541||1192'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar0525' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10222&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-10222-head.png" alt="郭万军"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10222&clinnicId=288&regCode=33"><i>郭万军</i></a></span>
+		                </td>
+		                <td width="7%"><span>四级专家</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='10222';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'下午-无号',start:'2016-08-29',url:''},{title:'下午-无号',start:'2016-08-30',url:''},{title:'下午-有号',start:'2016-09-05',url:'appointConfirm.jspx?resource=14401||641'},{title:'下午-有号',start:'2016-09-06',url:'appointConfirm.jspx?resource=14401||642'},{title:'下午-有号',start:'2016-09-12',url:'appointConfirm.jspx?resource=14401||643'},{title:'下午-有号',start:'2016-09-13',url:'appointConfirm.jspx?resource=14401||644'},{title:'下午-有号',start:'2016-09-19',url:'appointConfirm.jspx?resource=14401||645'},{title:'下午-有号',start:'2016-09-20',url:'appointConfirm.jspx?resource=14401||646'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar10222' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10269&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-10269-head.png" alt="罗亚"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10269&clinnicId=288&regCode=33"><i>罗亚</i></a></span>
+		                </td>
+		                <td width="7%"><span>主治医师</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='10269';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-09-02',url:''},{title:'上午-无号',start:'2016-09-09',url:''},{title:'上午-有号',start:'2016-09-16',url:'appointConfirm.jspx?resource=14412||641'},{title:'上午-有号',start:'2016-09-23',url:'appointConfirm.jspx?resource=14412||644'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar10269' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10973&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-10973-head.png" alt="徐佳军"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=10973&clinnicId=288&regCode=33"><i>徐佳军</i></a></span>
+		                </td>
+		                <td width="7%"><span>主治医师</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='10973';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-08-26',url:''},{title:'下午-无号',start:'2016-08-30',url:''},{title:'上午-无号',start:'2016-09-02',url:''},{title:'下午-无号',start:'2016-09-06',url:''},{title:'上午-无号',start:'2016-09-09',url:''},{title:'下午-有号',start:'2016-09-13',url:'appointConfirm.jspx?resource=27091||327'},{title:'上午-有号',start:'2016-08-27',url:'appointConfirm.jspx?resource=26495||8'},{title:'上午-有号',start:'2016-09-16',url:'appointConfirm.jspx?resource=27091||328'},{title:'下午-有号',start:'2016-09-20',url:'appointConfirm.jspx?resource=27091||331'},{title:'上午-有号',start:'2016-09-23',url:'appointConfirm.jspx?resource=27091||330'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar10973' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=1277&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-1277-head.png" alt="李涛(精)"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=1277&clinnicId=288&regCode=33"><i>李涛(精)</i></a></span>
+		                </td>
+		                <td width="7%"><span>一级专家</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='1277';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-08-31',url:''},{title:'上午-无号',start:'2016-09-07',url:''},{title:'上午-有号',start:'2016-09-14',url:'appointConfirm.jspx?resource=909||915'},{title:'下午-无号',start:'2016-08-25',url:''},{title:'下午-有号',start:'2016-09-08',url:'appointConfirm.jspx?resource=909||917'},{title:'上午-有号',start:'2016-09-21',url:'appointConfirm.jspx?resource=909||918'},{title:'下午-有号',start:'2016-09-22',url:'appointConfirm.jspx?resource=909||919'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar1277' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=1296&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-1296-head.png" alt="黄颐"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=1296&clinnicId=288&regCode=33"><i>黄颐</i></a></span>
+		                </td>
+		                <td width="7%"><span>二级专家</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='1296';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-08-31',url:''},{title:'下午-无号',start:'2016-08-31',url:''},{title:'上午-无号',start:'2016-09-07',url:''},{title:'下午-无号',start:'2016-09-07',url:''},{title:'上午-无号',start:'2016-09-14',url:''},{title:'下午-无号',start:'2016-09-14',url:''},{title:'上午-无号',start:'2016-09-21',url:''},{title:'下午-有号',start:'2016-09-21',url:'appointConfirm.jspx?resource=146||1051'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar1296' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14114&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-14114-head.png" alt="谢靓"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14114&clinnicId=288&regCode=33"><i>谢靓</i></a></span>
+		                </td>
+		                <td width="7%"><span>主治医师</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='14114';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'下午-无号',start:'2016-08-26',url:''},{title:'下午-有号',start:'2016-09-02',url:'appointConfirm.jspx?resource=29200||424'},{title:'下午-有号',start:'2016-09-09',url:'appointConfirm.jspx?resource=29200||427'},{title:'下午-有号',start:'2016-09-16',url:'appointConfirm.jspx?resource=29200||430'},{title:'下午-有号',start:'2016-09-23',url:'appointConfirm.jspx?resource=29200||432'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar14114' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14116&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-14116-head.png" alt="黄明金"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14116&clinnicId=288&regCode=33"><i>黄明金</i></a></span>
+		                </td>
+		                <td width="7%"><span>主治医师</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='14116';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'下午-无号',start:'2016-08-29',url:''},{title:'下午-无号',start:'2016-09-05',url:''},{title:'下午-无号',start:'2016-09-12',url:''},{title:'下午-有号',start:'2016-09-19',url:'appointConfirm.jspx?resource=29076||376'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar14116' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14117&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-14117-head.png" alt="康玉坤"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14117&clinnicId=288&regCode=33"><i>康玉坤</i></a></span>
+		                </td>
+		                <td width="7%"><span>主治医师</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='14117';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'下午-无号',start:'2016-08-25',url:''},{title:'下午-无号',start:'2016-09-01',url:''},{title:'下午-有号',start:'2016-09-08',url:'appointConfirm.jspx?resource=44467||343'},{title:'下午-有号',start:'2016-09-22',url:'appointConfirm.jspx?resource=44467||346'},{title:'下午-有号',start:'2016-09-03',url:'appointConfirm.jspx?resource=44467||364'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar14117' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	 <tr id="ret">
+						<td width="12%"><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14697&clinnicId=288&regCode=33">
+		                <img style="width:130px;height:130px;" src="http://portal.cd120.info/attaches/doctors/HID0101/HID0101-14697-head.png" alt="胡泽卿"/></a>
+		                </td>
+		                <td width="15%">
+		                    <span><a style="background-color: white;" href="doctorByCode.jspx?doctorCode=14697&clinnicId=288&regCode=33"><i>胡泽卿</i></a></span>
+		                </td>
+		                <td width="7%"><span>二级专家</span></td>
+		                <td width="13%"><span><em>心理卫生</em></span></td>
+				    <td width="52%">
+						<script type="text/javascript">
+							$(document).ready(function() {
+								var date = new Date();
+								var d = date.getDate();
+								var m = date.getMonth();
+								var y = date.getFullYear();
+								var id='14697';
+								$('#calendar'+id).fullCalendar({
+									aspectRatio: 1.35,
+						            header: {
+						                left: 'title',
+						                center: '',
+						                right: 'today month basicWeek prev,next'
+							        },
+						    year:y,
+							month:m,
+							date:d,
+							setHeight: 60,
+							weekends: true,
+							weekNumbers: false,
+							weekNumberCalculation: 'iso',
+							weekNumberTitle: 'W',
+
+							// editing
+							//editable: false,
+							//disableDragging: false,
+							//disableResizing: false,
+
+							allDayDefault: true,
+							ignoreTimezone: true,
+
+							// event ajax
+							lazyFetching: true,
+							startParam: 'start',
+							endParam: 'end',
+
+							// time formats
+							titleFormat: {
+								month: 'yyyy年MMM月',
+								week: "MMM月d日{'&#8212;'MMM月d日}",
+								day: 'dddd, MMM d, yyyy'
+							},
+							columnFormat: {
+								month: 'ddd',
+								week: 'ddd M/d',
+								day: 'dddd M/d'
+							},
+							timeFormat: { // for event elements
+								'': 'h(:mm)t' // default
+							},
+							// locale
+							isRTL: false,
+							firstDay: 1,
+							monthNames: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+							monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+							dayNames: ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'],
+							dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+							buttonText: {
+								prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
+								next: "<span class='fc-text-arrow'>&rsaquo;</span>",
+								prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
+								nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
+								today: '今天',
+								month:'月',
+								week:'周',
+								day:'日'
+							},
+									events: [{title:'上午-无号',start:'2016-08-25',url:''},{title:'上午-无号',start:'2016-08-31',url:''},{title:'上午-无号',start:'2016-09-01',url:''},{title:'上午-无号',start:'2016-09-07',url:''},{title:'上午-有号',start:'2016-09-08',url:'appointConfirm.jspx?resource=38718||289'},{title:'上午-有号',start:'2016-09-21',url:'appointConfirm.jspx?resource=38718||291'},{title:'上午-有号',start:'2016-09-22',url:'appointConfirm.jspx?resource=38718||292'}]
+								});
+
+							});
+						</script>
+				        <div id='calendar14697' class="calendar"></div>
+				        </td>
+				    </tr>
+	        	</table>
+	        	<input type="hidden" name="pageNo" value=""/>
+		        <input type="hidden" name="regCode" value="33"/>
+		        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="center" class="pn-sp">
+	               	 共 44 条&nbsp;
+	               	 每页 10 条&nbsp;
+	                <input type="button" value="首 页"  onclick="_gotoPage('1');" disabled="disabled"/>
+	                <input type="button" value="上一页" onclick="_gotoPage('1');" disabled="disabled"/>
+	                <input type="button" value="下一页" onclick="_gotoPage('2');"/>
+	                <input type="button" value="尾 页" onclick="_gotoPage('5');"/>&nbsp;
+	               	 当前 1/5 页 &nbsp;转到第<input type="text" value="1" id="_goPs" style="width:50px" onfocus="this.select();" onkeypress="if(event.keyCode==13){$('#_goPage').click();return false;}"/>页
+	                <input id="_goPage" type="button" value="转" onclick="_gotoPage($('#_goPs').val());"/>
+	            </td>
+	            </tr>
+	            </table>
+	            <script type="text/javascript">
+	            function _gotoPage(pageNo) {
+	                try{
+	                    var tableForm = document.getElementById("tableForm");
+	                    $("input[name=pageNo]").val(pageNo);
+	                    tableForm.onsubmit=null;
+	                    tableForm.submit();
+	                } catch(e) {
+	                    alert('_gotoPage(pageNo)方法出错');
+	                }
+	            }
+	            </script>
+        </form>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="ftBox">
+
+<div class="subMenu">
+<span>最新更新</span> | <span><a href="/zzgj/53463.jhtml">组织架构</a>
+</span>| <span><a href="/htmlzkjsyijifuzhukeshi/index.jhtml">特色医疗</a>
+</span>| <span><a href="/htmlhxcdyijiaoke/index.jhtml">人才培养</a>
+</span>   | <span><a href="http://kyb.cd120.com/">学科建设</a></span>   |  <span>
+<a href="http://www.hxyx.com/dang" target="_blank">党群工作</a></span>  |  <span>
+	<a href="/newsvideo/index.jhtml">影像华西</a>
+</span>  |   <span><a href="http://www.cd120.com/html/yb/">医院院报</a></span>    |    <span>
+<a href="http://www.cd120.com/jkjmedia/index.jhtml">媒体聚焦</a></span>
+</div>
+
+<div class="ftBk">
+	<div class="ftWd">
+		<div class="fr copyR">
+			<!--<span><a href="#">版权声明</a></span> | <span><a href="htmlylfwjiuyizhinan/63296.jhtml">法律责任</a></span>| <span><a href="#">隐私声明</a></span>| <span><a href="#">联系我们</a></span>   | <span><a href="#">网站地图</a></span>   |  <span><a href="#">打 印</a></span> <p>地址：四川省成都市武侯区国学巷37号，610041</p><p>咨询电话：028-85422114        医院微博：@四川大学华西医院（新浪、腾讯）</p><p>蜀ICP备05013927号                © 2012-2013 四川大学华西医院版权所有</p></div>
+			-->
+			<div style="width: 430px;float: left">
+				<span><a href="/htmlylfwjiuyizhinan/63793.jhtml">法律声明</a></span> | <!-- <span><a href="#">法律责任</a></span>| <span><a href="#">隐私声明</a></span>| -->
+				<span><a href="/htmlylfwjiuyizhinan/124.jhtml">联系我们</a></span>   | <span>网站地图</span>   |
+				<span><a target='_blank'href="#" onclick="window.print();">打 印</a></span>
+				<p>地址：四川省成都市武侯区国学巷37号，610041</p><!-- <p>咨询电话：028-85422114 </p> -->
+				 <!-- 医院微博：@四川大学华西医院（新浪、腾讯） -->
+				<p>蜀ICP备16010396号                © 2012-2015 四川大学华西医院版权所有</p>
+				<p>“互联网医疗保健信息服务审核同意书”编号：川卫网审【2015·352】号</p>
+			</div>
+			<div style="float: left;width: 96px;">
+				<span><img alt="" src="/images/hxweixinlogo-96.jpg" width="96" height="96" ></span>
+				<!-- <p style="float: left;width: 68px;">&nbsp;&nbsp;&nbsp;官方微信</p> -->
+			</div>
+			<div style="float: left;width: 96px;margin-left: 30px;">
+				<span><img alt="" src="/images/hxweibologo-96.png" width="96" height="96" ></span>
+				<!-- <p style="float: left;width: 68px;">&nbsp;&nbsp;&nbsp;官方微博</p> -->
+			</div>
+		</div>
+		<div class="fl"><img src="/images/ftLogo.png" width="303" height="99"  alt=""/></div>
+	</div>
+</div>
+</div><!--End ftBox-->
+</body>
+</html>
