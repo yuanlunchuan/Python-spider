@@ -1,5 +1,6 @@
 import requests
 from lxml import etree
+from multiprocessing.dummy import Pool as ThreadPool
 
 def urls():
     urls = []
@@ -8,15 +9,18 @@ def urls():
     return urls
 
 def get_html_source(url):
+    print("---------craw: ", url)
     return requests.get(url).text
 
 def parse_html(html):
     selector = etree.HTML(html)
     doctors = selector.xpath("//tr[@id='ret']")
-    i = 1
     for doctor in doctors:
-      print(i, doctor.xpath("td[2]/span/a/i/text()")[0])
-      i += 1
+      f = open('huaxi_doctor_result.txt', 'a', encoding='utf-8')
+      f.writelines("医生名字: "+doctor.xpath("td[2]/span/a/i/text()")[0])
+      f.writelines("    "+doctor.xpath("td[3]/span/text()")[0])
+      f.writelines("    " + doctor.xpath("td[4]/span/em/text()")[0]+"\n")
+      f.close()
 
 if __name__ == '__main__':
     url_collection = urls()
