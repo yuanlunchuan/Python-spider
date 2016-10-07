@@ -1,13 +1,20 @@
 from pymongo import MongoClient
 
-client = MongoClient('localhost', 27017)
-db = client.huaxiHospital
-collection = db.Doctor
+class MongoTest:
+  ip = ''
+  port = 0
 
-item = {
-  'name': 'zhangsan',
-  'age': 29
-}
-collection.insert(item)
-for doctor in collection.find():
-  print('------', doctor)
+  def __init__(self, ip, port):
+    self.ip = ip
+    self.port = port
+
+  def collect(self):
+    return MongoClient(self.ip, self.port)
+
+  def getCollection(self):
+    return MongoClient(self.ip, self.port).huaxiHospital.Doctor
+
+# mongo_test = MongoTest('localhost', 27017)
+for doctor in MongoClient('localhost', 27017).huaxiHospital.Doctor:
+  print("----: ", doctor)
+
