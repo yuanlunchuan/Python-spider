@@ -15,7 +15,7 @@ class BtSpider:
     selector = etree.HTML(html_page)
     movies = selector.xpath("//div[@class='title']")
     for movie in movies:
-      print("---------电影名称： "+str(movie.xpath("p[1]/a/b/font/text()")))
+      print("---------电影名称： "+str(movie.xpath("p[1]/a/b/font")[0].xpath("string(.)")))
 
 if __name__=="__main__":
   bt_spider = BtSpider()
