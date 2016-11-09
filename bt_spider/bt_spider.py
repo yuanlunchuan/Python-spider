@@ -4,7 +4,7 @@ from lxml import etree
 class BtSpider:
   def get_urls(self):
     urls = []
-    for i in range(1, 10):
+    for i in range(1, 2):
       urls.append("http://www.bttiantang.org/index-"+str(i)+".html")
     return urls
 
@@ -12,8 +12,12 @@ class BtSpider:
     return requests.get(url).text
 
   def get_btn_item(self, html_page):
-    return
+    selector = etree.HTML(html_page)
+    movies = selector.xpath("//div[@class='item cl']")
+    for movie in movies:
+      print("---------电影名称： "+movie.xpath("div[0]/p/span/font/text()")[0])
+
 if __name__=="__main__":
   bt_spider = BtSpider()
   for url in bt_spider.get_urls():
-    print(bt_spider.html_page_source(url))
+    bt_spider.get_btn_item(bt_spider.html_page_source(url))
