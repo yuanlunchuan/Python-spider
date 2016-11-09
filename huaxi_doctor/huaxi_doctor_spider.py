@@ -9,7 +9,6 @@ def urls():
     return urls
 
 def get_html_source(url):
-    print("---------craw: ", url)
     return requests.get(url).text
 
 def parse_html(html):
