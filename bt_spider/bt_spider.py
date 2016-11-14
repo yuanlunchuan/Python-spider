@@ -1,5 +1,6 @@
 import requests
 from lxml import etree
+from pymongo import MongoClient
 
 class BtSpider:
   current_page = 1
@@ -23,7 +24,13 @@ class BtSpider:
       print("电影别名 " +str(movie.xpath("p[2]/a/text()")))
       print("豆瓣评分 "+str(movie.xpath("p[4]/strong/text()")))
 
-if __name__=="__main__":
-  bt_spider = BtSpider()
-  for url in bt_spider.get_urls():
-    bt_spider.get_btn_item(bt_spider.html_page_source(url))
+# if __name__=="__main__":
+#   bt_spider = BtSpider()
+#   for url in bt_spider.get_urls():
+#     bt_spider.get_btn_item(bt_spider.html_page_source(url))
+
+client = MongoClient("localhost", 27017)
+db = client.huaxiHospital
+collection = db.Doctor
+for data in collection.find():
+  print("----data: "+str(data))
