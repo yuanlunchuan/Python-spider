@@ -13,7 +13,6 @@ class BtSpider:
   def get_urls(self):
     urls = []
     for i in range(1, 100):
-      print("----------page: "+str(i))
       urls.append("http://www.bttiantang.org/index-"+str(i)+".html")
     return urls
 
