@@ -1,12 +1,13 @@
 import requests
 from lxml import etree
 from pymongo import MongoClient
+from multiprocessing.dummy import Pool as ThreadPool
 
 class BtSpider:
   current_page = 1
-  client = MongoClient("localhost", 27017)
 
   def __init__(self):
+    self.client = MongoClient("localhost", 27017)
     self.db = self.client.bt_sources
     self.collection = self.db.bts
 
